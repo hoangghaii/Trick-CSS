@@ -1,0 +1,143 @@
+jQuery: <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+Font-Awesome: <script src="https://kit.fontawesome.com/9f92915eda.js"></script>
+
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+//==========================================================//
+
+
+col- (thiết bị cực nhỏ – độ rộng màn hình ít hơn 576px)
+.col-sm- (thiết bị nhỏ – kích thước màn hình >= 576px)
+.col-md- (thiết bị trung bình – kích thước màn hình >= 768px)
+.col-lg- (thiết bị lớn – kích thước màn hình >= 992px)
+.col-xl- (thiết bị siêu lớn – kích thước màn hình >= 1200px)
+
+
+//==========================================================//
+
+
+body{
+	min-height:100vh;
+}
+
+
+//==========================================================//
+
+
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+
+
+//==========================================================//
+
+
+//upload image//
+$permited = array('jpg', 'jpeg', 'png', 'gif');
+$file_name = $_FILES['image']['name'];
+$file_size = $_FILES['image']['size'];
+$file_temp = $_FILES['image']['tmp_name'];
+
+$div = explode('.', $file_name);
+$file_ext = strtolower(end($div));
+$unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
+$uploader_image = "uploads/".$unique_image;
+
+
+//==========================================================//
+
+
+Điểm breakpoint		Mô tả
+320 px			Màn hình chiều dọc cho smartphone nhỏ (VD iPhone 5)
+480 px			Màn hình chiều ngang cho smartphone nhỏ
+640 px			Màn hình chiều ngang cho smartphone vừa
+768 px			Màn hình chiều dọc cho tablet (VD: iPad)
+1024 px			Màn hình chiều ngang cho tablet (VD: iPad), hoặc chiều dọc cho tablet lớn (VD iPad Pro)
+
+
+//==========================================================//
+
+
+background-image: linear-gradient(#353c4e,#353c4e),radial-gradient(circle at top left, #fd00da,#19d7f8);
+
+
+//==========================================================//
+
+
+Bắt sự kiện trong Reactjs:
+-Nếu không có tham số: ten_function = () => {}  /* --- */  onClick={this.ten_function}
+-Nếu có tham số: ten_function = tham_so => {}  /* --- */  onClick={() => this.ten_function(tham_so)}
+
+
+//==========================================================//
+
+
+Heroku token: c60429f1-154d-4826-bbbd-cfe7b53d3f99
+
+omely-admin: adminhai@gmail.com - 12345
+
+
+//==========================================================//
+
+
+arrow function: const add = (a,b) => (a+b)   bằng với const add = (a,b) => {return a+b}
+
+
+//==========================================================//
+
+
+Tạo một khối có đoạn chữ rất dài bât kỳ, có độ rộng tối đa là `500px` hiển thị 3 hàng kết hợp dấu 3 chấm
+
+.box {
+    font-size: 1.5rem;
+    max-width: 50rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    border: 1px solid #ccc;
+}
+
+
+//==========================================================//
+
+
+Tạo số nguyên ngẫu nhiên trong một phạm vi: 
+
+Math.floor(Math.random() * (max - min + 1)) + min
+
+
+//==========================================================//
+
+
+[A-Za_z0-9_] = \w
+[^A-Za_z0-9_] = \W (!@#$%...)
+[0-9] = \d
+[^0-9] = \D
+[ \r\t\f\n\v] = \s (tim kiem khoang trang, dau tab, dau cach, ...)
+\S : giong \s nhung khong tim kiem khoang trang
+dau + : tim kiem 1 hoac nhieu ky tu
+dau * : tim kiem khong hoac nhieu ky tu
+
+
+//==========================================================//
+
+
+add action scroll mouse down hide menu bar:
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
